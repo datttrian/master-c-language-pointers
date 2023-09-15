@@ -9,7 +9,6 @@ char *input(void)
 {
 	static char buffer[SIZE];
 	char *r;
-	int x;
 
 	// Initiate the buffer
 	buffer[0] = '\0';
@@ -23,12 +22,12 @@ char *input(void)
 	}
 
 	// Remove the newline
-	for (x = 0; x < SIZE; x++)
+	for (int i = 0; i < SIZE; i++)
 	{
-		/* remove newline */
-		if (buffer[x] == '\n')
+		// Remove newline
+		if (buffer[i] == '\n')
 		{
-			buffer[x] = '\0';
+			buffer[i] = '\0';
 			break;
 		}
 	}

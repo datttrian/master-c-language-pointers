@@ -19,12 +19,11 @@ char *input(void)
 {
 	static char buffer[SIZE];
 	char *r;
-	int x;
 
-	/* initialize the buffer */
+	// Initiate the buffer
 	buffer[0] = '\0';
 
-	/* gather input */
+	// Gather input
 	r = fgets(buffer, SIZE, stdin);
 	if (r == NULL)
 	{
@@ -32,13 +31,13 @@ char *input(void)
 		exit(1);
 	}
 
-	/* remove the newline */
-	for (x = 0; x < SIZE; x++)
+	// Remove the newline
+	for (int i = 0; i < SIZE; i++)
 	{
-		/* remove newline */
-		if (buffer[x] == '\n')
+		// Remove newline
+		if (buffer[i] == '\n')
 		{
-			buffer[x] = '\0';
+			buffer[i] = '\0';
 			break;
 		}
 	}

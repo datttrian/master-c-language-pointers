@@ -56,13 +56,12 @@ void output(struct item *s)
 int main()
 {
 	struct item *first, *current, *temp;
-	int x;
 
 	// Build a linked list with 5 items
-	for (x = 0; x < 5; x++)
+	for (int i = 0; i < 5; i++)
 	{
 		// Allocate initial structure
-		if (x == 0)
+		if (i == 0)
 		{
 			first = allocate();
 			current = first;
@@ -75,7 +74,7 @@ int main()
 			// Make the next structure the current structure
 			current = current->next;
 		}
-		fill(current, x);
+		fill(current, i);
 	}
 
 	/* cap the final structure */
